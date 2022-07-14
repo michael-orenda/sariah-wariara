@@ -67,10 +67,10 @@
                 <v-card
                   class="card"
                   shaped
-                  @click="showInputs(donation.id)"
                   :elevation="hover ? 10 : 4"
                   :class="{ up: hover }"
                 >
+                  <v-card-text></v-card-text>
                   <v-img
                     :src="donation.img"
                     max-width="100px"
@@ -78,9 +78,11 @@
                     :class="{ 'zoom-efect': hover }"
                   ></v-img>
                   <h1 class="font-weight-regular">{{ donation.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1">
+                  <h4 class="font-weight-regular subtitle-1" @click="mpesa = !mpesa">
                     {{ donation.text }}
                   </h4>
+                  <Mpesa v-if="mpesa && donation.id == 1" />
+                  <PayPal v-if="donation.id == 2" />
                 </v-card>
               </v-hover>
             </v-col>
@@ -92,12 +94,19 @@
 </template>
 
 <script>
+import PayPal from '../PayPal.vue';
+import Mpesa from '../Mpesa.vue';
+
 export default {
   name: "HomeSection",
+  components: {
+    PayPal,
+    Mpesa
+},
   data() {
     return {
       dialog: false,
-      apiKey: process.env.VUE_APP_STRIPE_API_KEY,
+      mpesa: false,
       donations: [
         {
           id: 1,
