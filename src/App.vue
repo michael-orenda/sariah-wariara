@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/wariara.jpeg">
   <HelloWorld msg="Welcome to Baby Wariara's fundraising page"/>
   <HomePage />
 </template>
