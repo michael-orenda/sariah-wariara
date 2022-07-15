@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer dark padless class="mt-10">
     <v-card flat tile class="secondary white--text text-center">
       <v-card-text class="white--text pt-0">
         Thank you, and may God bless you abundantly

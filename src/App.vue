@@ -2,7 +2,6 @@
   <v-app>
     <v-main class="pt-0">
       <Home />
-      <Contact />
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -35,7 +34,6 @@
 <script>
 import AppFooter from "./components/AppFooter";
 import Home from "./components/sections/HomeSection";
-import Contact from "./components/sections/ContactSection";
 
 export default {
   name: "App",
@@ -43,7 +41,6 @@ export default {
   components: {
     AppFooter,
     Home,
-    Contact,
   },
 
   data: () => ({

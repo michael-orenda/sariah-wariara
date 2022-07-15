@@ -4,7 +4,7 @@
       <v-card-text>
         <v-text-field
           label="Phone Number"
-          placeholder="Phone Number"
+          placeholder="Phone Number e.g. 254712345678"
           type="number"
           outlined
           v-model="editedItem.phone_number"
@@ -18,7 +18,12 @@
           v-model="editedItem.donation_amount"
           :rules="rules.required"
         />
-        <v-btn :loading="loading" color="primary" block @click="donate">
+        <v-btn 
+          :loading="loading" 
+          color="primary" 
+          block 
+          @click="donate"
+        >
           Donate
         </v-btn>
       </v-card-text>
@@ -43,8 +48,8 @@ export default {
         ],
       },
       editedItem: {
-        donation_amount: 0,
-        phone_number: 0,
+        donation_amount: '',
+        phone_number: '',
       },
     };
   },
@@ -81,24 +86,43 @@ export default {
       }
     },
     async generateAccessToken(credentials) {
-      let url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
+      let url = "/oauth/v1/generate?grant_type=client_credentials";
       let config = {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Basic " + credentials,
+          "Authorization": "Basic " + credentials,
         },
       };
 
       await axios.get(url, config)
-        .then((res) => {
-          console.log(res);
-          this.loading = false;
+        .then((response) => {
+          let token = response.data.access_token;
+          this.generateSTKPush(token);
         })
-        .catch((err) => {
-          console.log(err);
+        .catch((error) => {
+          console.log(error);
           this.loading = false;
         });
     },
+    async generateSTKPush(token) {
+      let url = "/mpesa/stkpush/v1/processrequest";
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token,
+        },
+      };
+
+      await axios.post(url, this.editedItem, config)
+        .then((response) => {
+          console.log(response)
+          this.loading = false;
+        })
+        .catch((error) => {
+          console.log(error);
+          this.loading = false;
+        });
+    },  
   },
 };
 </script>

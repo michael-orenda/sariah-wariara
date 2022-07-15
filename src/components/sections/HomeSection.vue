@@ -78,7 +78,7 @@
                     :class="{ 'zoom-efect': hover }"
                   ></v-img>
                   <h1 class="font-weight-regular">{{ donation.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1" @click="mpesa = !mpesa">
+                  <h4 class="font-weight-regular subtitle-1" @click="donation.id == 1 ? (mpesa = !mpesa) : ''">
                     {{ donation.text }}
                   </h4>
                   <Mpesa v-if="mpesa && donation.id == 1" />
