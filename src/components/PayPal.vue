@@ -4,7 +4,7 @@
     <component :is="'script'">
       PayPal.Donation.Button({
         env: "production",
-        hosted_button_id: "QZUZCWCK3NTL4",
+        hosted_button_id: "JWR6AK23G6EJ8",
         image: {
           src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
           alt: "Donate with PayPal button",
