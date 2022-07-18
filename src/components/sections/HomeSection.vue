@@ -1,6 +1,6 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/img/bgDarkBlue.jpeg" height="850">
+    <v-parallax dark src="@/assets/img/bgDarkBlue.jpeg" :height="$vuetify.breakpoint.mdAndUp ? 950 : 1050">
       <v-row justify="center" class="mt-15 mb-n15">
         <v-col cols="10">
           <v-row>
@@ -12,28 +12,77 @@
                 For A Heart Corrective Surgery In India
               </h2>
               <p class="font-weight-light">
-                Baby Sariah Wariara has "Tetralogy of Fallot" malformation
-                <br v-if="$vuetify.breakpoint.mdAndUp" />
-                of the heart septum which allows deoxygenated blood from
-                <br v-if="$vuetify.breakpoint.mdAndUp" />
-                the right ventricle to the left ventricle resulting to
-                hypoventilation <br v-if="$vuetify.breakpoint.mdAndUp" />
-                of the body system hence you see blue discoloration of
-                extremities, skin, <br v-if="$vuetify.breakpoint.mdAndUp" />
-                frenulum and tip of the tongue... it's correctible as early as
-                now
+                The Anyonje family was blessed with a baby girl (Sariah
+                Wariara)). <br v-if="$vuetify.breakpoint.mdAndUp" />
+                Unfortunately, they received the devastating news that their
+                newborn daughter <br v-if="$vuetify.breakpoint.mdAndUp" />
+                was born with a congenital heart defect called Tetralogy of
+                Fallot. <br v-if="$vuetify.breakpoint.mdAndUp" />
+                At five days old she was referred to Kenyatta National Hospital,
+                where <br v-if="$vuetify.breakpoint.mdAndUp" />
+                the condition was confirmed and the family were told that she
+                would need open-heart surgery to survive in India.
               </p>
-              <v-btn
-                rounded
-                outlined
-                large
-                dark
-                @click="$vuetify.goTo('#donations')"
-                class="mt-5"
-              >
-                Make A Donation
-                <v-icon class="ml-2">mdi-arrow-down</v-icon>
-              </v-btn>
+              <p class="font-weight-light">
+                The Amount Needed for this Operation is <span class="font-weight-bold">Kshs 2,000,000 
+                (1.5M for Open heart Surgery and 500,000 for travel expense).</span>
+              </p>
+              <p class="font-weight-bold primary--text">
+                #IStandWithSariah
+              </p>
+              <div class="video d-flex align-center py-4">
+                <v-btn
+                  rounded
+                  outlined
+                  large
+                  dark
+                  @click="$vuetify.goTo('#donations')"
+                >
+                  Make A Donation
+                  <v-icon class="ml-2">mdi-arrow-down</v-icon>
+                </v-btn>
+                <v-spacer></v-spacer>
+                <a @click.stop="dialog = true" class="playBut">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                    x="0px"
+                    y="0px"
+                    width="60px"
+                    height="60px"
+                    viewBox="0 0 213.7 213.7"
+                    enable-background="new 0 0 213.7 213.7"
+                    xml:space="preserve"
+                  >
+                    <polygon
+                      class="triangle"
+                      id="XMLID_18_"
+                      fill="none"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      points="73.5,62.5 148.5,105.8 73.5,149.1 "
+                    />
+
+                    <circle
+                      class="circle"
+                      id="XMLID_17_"
+                      fill="none"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      cx="106.8"
+                      cy="106.8"
+                      r="103.3"
+                    />
+                  </svg>
+                </a>
+                <p class="subheading ml-2 mb-0">Watch the Video</p>
+              </div>
             </v-col>
             <v-col cols="12" md="6" xl="4">
               <v-img
@@ -46,19 +95,17 @@
           </v-row>
         </v-col>
       </v-row>
-      <v-row justify="center">
-        <h1 class="display-1 primary--text font-weight-bold mt-15">
+    </v-parallax>
+    <v-container fluid id="donations" class="mt-n15">
+      <v-row justify="center" class="mt-n15">
+        <h1 class="display-1 primary--text font-weight-bold mt-n15 mb-15">
           You Can Contribute Via:
         </h1>
-      </v-row>
-    </v-parallax>
-    <v-container fluid id="donations">
-      <v-row justify="center">
         <v-col cols="10">
           <v-row justify="space-around">
             <v-col
               cols="12"
-              sm="4"
+              sm="6"
               class="text-center"
               v-for="(donation, i) in donations"
               :key="i"
@@ -78,7 +125,10 @@
                     :class="{ 'zoom-efect': hover }"
                   ></v-img>
                   <h1 class="font-weight-regular">{{ donation.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1" @click="donation.id == 1 ? (mpesa = !mpesa) : ''">
+                  <h4
+                    class="font-weight-regular subtitle-1"
+                    @click="donation.id == 1 ? (mpesa = !mpesa) : ''"
+                  >
                     {{ donation.text }}
                   </h4>
                   <Mpesa v-if="mpesa && donation.id == 1" />
@@ -90,49 +140,82 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-dialog v-model="dialog" max-width="640px">
+      <v-card>
+        <youtube
+          :video-id="videoId"
+          @ready="ready"
+          @playing="playing"
+        ></youtube>
+      </v-card>
+    </v-dialog>
   </section>
 </template>
 
 <script>
-import PayPal from '../PayPal.vue';
-import Mpesa from '../Mpesa.vue';
+import PayPal from "../PayPal.vue";
+import Mpesa from "../Mpesa.vue";
 
 export default {
   name: "HomeSection",
   components: {
     PayPal,
-    Mpesa
-},
+    Mpesa,
+  },
   data() {
     return {
       dialog: false,
       mpesa: false,
+      videoId: "",
       donations: [
         {
           id: 1,
           img: require("@/assets/img/mpesa.jpeg"),
-          title: "PAYBILL NO.: 8046207 ACCOUNT: YOUR NAME",
-          text: "Click Here To Contribute Via Mpesa",
+          title: "PAYBILL NO.: 8046207",
+          text: "ACCOUNT: YOUR NAME",
         },
         {
           id: 2,
           img: require("@/assets/img/paypal.png"),
           title: "HAVE A PAYPAL ACCOUNT?",
-          text: "Click Here To Contribute Via Paypal",
+          text: "Click Donate To Contribute Via Paypal",
         },
-        {
-          id: 3,
-          img: require("@/assets/img/card.jpeg"),
-          title: "USE CARD/CREDIT?",
-          text: "Click Here To Contribute Via Mastercard/Visa",
-        },
+        // {
+        //   id: 3,
+        //   img: require("@/assets/img/card.jpeg"),
+        //   title: "USE CARD/CREDIT?",
+        //   text: "Click Here To Contribute Via Mastercard/Visa",
+        // },
       ],
     };
   },
+  created() {
+    this.getYouTubeVideo(process.env.VUE_APP_YOUTUBE_LINK);
+  },
   methods: {
-    showInputs(id) {
-      alert(id);
+    ready(event) {
+      this.player = event.target;
     },
+    playing(event) {
+      // The player is playing a video.
+      console.log(event);
+    },
+    change() {
+      // when you change the value, the player will also change.
+      // If you would like to change `playerVars`, please change it before you change `videoId`.
+      // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
+      // If `playerVars.autoplay` is 0, `cueVideoById` will be called.
+      this.videoId = "another video id";
+    },
+    stop() {
+      this.player.stopVideo();
+    },
+    pause() {
+      this.player.pauseVideo();
+    },
+    getYouTubeVideo(url) {
+      this.videoId = this.$youtube.getIdFromURL(url)
+    }
   },
 };
 </script>
@@ -143,7 +226,7 @@ export default {
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
   -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0.3;
 }
 
@@ -151,7 +234,7 @@ export default {
   /*  border: 1px solid red;*/
   display: inline-block;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease;
 
   .triangle {
     -webkit-transition: all 0.7s ease-in-out;
@@ -168,7 +251,6 @@ export default {
       opacity: 1;
       stroke: white;
       animation: nudge 0.7s ease-in-out;
-
       @keyframes nudge {
         0% {
           transform: translateX(0);
@@ -197,6 +279,19 @@ export default {
 </style>
 
 <style>
+.btn-play {
+  transition: 0.2s;
+}
+
+.svg-border-waves .v-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+
 #hero {
   z-index: 0;
 }

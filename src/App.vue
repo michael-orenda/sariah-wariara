@@ -2,6 +2,7 @@
   <v-app>
     <v-main class="pt-0">
       <Home />
+      <Description />
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -33,6 +34,7 @@
 
 <script>
 import AppFooter from "./components/AppFooter";
+import Description from "./components/sections/DescriptionSection.vue";
 import Home from "./components/sections/HomeSection";
 
 export default {
@@ -41,6 +43,7 @@ export default {
   components: {
     AppFooter,
     Home,
+    Description
   },
 
   data: () => ({
