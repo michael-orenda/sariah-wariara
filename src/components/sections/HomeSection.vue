@@ -127,7 +127,6 @@
                   <h1 class="font-weight-regular">{{ donation.title }}</h1>
                   <h4
                     class="font-weight-regular subtitle-1"
-                    @click="donation.id == 1 ? (mpesa = !mpesa) : ''"
                   >
                     {{ donation.text }}
                   </h4>
