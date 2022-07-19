@@ -81,7 +81,6 @@
                     />
                   </svg>
                 </a>
-                <p class="subheading ml-2 mb-0">Watch the Video</p>
               </div>
             </v-col>
             <v-col cols="12" md="6" xl="4">
