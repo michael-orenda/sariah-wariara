@@ -89,7 +89,7 @@
                 src="@/assets/img/sariah.jpeg"
                 max-height="350"
                 max-width="350"
-                class="hidden-sm-and-down float-right"
+                class="hidden-sm-and-down float-right mt-15"
               />
             </v-col>
           </v-row>
