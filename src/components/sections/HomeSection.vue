@@ -120,12 +120,12 @@ export default {
           title: "HAVE A PAYPAL ACCOUNT?",
           text: "Click Here To Contribute Via Paypal",
         },
-        {
-          id: 3,
-          img: require("@/assets/img/card.jpeg"),
-          title: "USE CARD/CREDIT?",
-          text: "Click Here To Contribute Via Mastercard/Visa",
-        },
+        // {
+        //   id: 3,
+        //   img: require("@/assets/img/card.jpeg"),
+        //   title: "USE CARD/CREDIT?",
+        //   text: "Click Here To Contribute Via Mastercard/Visa",
+        // },
       ],
     };
   },
