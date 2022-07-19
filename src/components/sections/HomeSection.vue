@@ -28,7 +28,7 @@
                 (1.5M for Open heart Surgery and 500,000 for travel expense).</span>
               </p>
               <p class="font-weight-bold primary--text">
-                #IStandWithSariah
+                #ForWariara
               </p>
               <div class="video d-flex align-center py-4">
                 <v-btn
