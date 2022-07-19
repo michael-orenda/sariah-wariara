@@ -22,8 +22,6 @@
                 where <br v-if="$vuetify.breakpoint.mdAndUp" />
                 the condition was confirmed and the family were told that she
                 would need open-heart surgery to survive in India.
-
-                https://youtu.be/wbkvEzsPSWI
               </p>
               <p class="font-weight-light">
                 The Amount Needed for this Operation is <span class="font-weight-bold">Kshs 2,000,000 
@@ -87,12 +85,13 @@
               </div>
             </v-col>
             <v-col cols="12" md="6" xl="4">
-              <v-img
-                src="@/assets/img/sariah.jpeg"
-                max-height="350"
-                max-width="350"
-                class="hidden-sm-and-down float-right mt-15"
-              />
+              <v-card class="hidden-sm-and-down float-right mt-15">
+                <youtube
+                  :video-id="videoId"
+                  @ready="ready"
+                  @playing="playing"
+                ></youtube>
+              </v-card>
             </v-col>
           </v-row>
         </v-col>
