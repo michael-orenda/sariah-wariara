@@ -11,19 +11,19 @@
               <h1 class="font-weight-light display-1">Family Contacts</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> <a href="mailto:stephenanyonje.gyg@gmail.com">stephenanyonje.gyg@gmail.com</a></h3>
             </v-col>
             <v-col cols="12" sm="4">
               <h1 class="font-weight-light display-1">Aga Khan Hospital</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Sean</h3>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
             </v-col>
             <v-col cols="12" sm="4">
               <h1 class="font-weight-light display-1">Kenyatta National Hospital</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Osano</h3>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
             </v-col>
           </v-row>
         </v-col>
