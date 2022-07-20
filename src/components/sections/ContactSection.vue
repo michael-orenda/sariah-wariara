@@ -16,13 +16,13 @@
             <v-col cols="12" sm="4">
               <h1 class="font-weight-light display-1">Aga Khan Hospital</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Sean</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> </h3>
               <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
             </v-col>
             <v-col cols="12" sm="4">
               <h1 class="font-weight-light display-1">Kenyatta National Hospital</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Osano</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> </h3>
               <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
             </v-col>
           </v-row>
