@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "name": "Amount Required",
+        "name": "Estimated Amount Required",
         "icon": "mdi-airplane-edit",
         "color": "warning",
-        "value": 2000000
+        "value": 2500000
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
     },
     {
         "id": 3,
-        "name": "Amount Withheld",
+        "name": "Amount Withheld in Paypal",
         "icon": "mdi-currency-usd-off",
         "color": "teal",
         "value": 500
