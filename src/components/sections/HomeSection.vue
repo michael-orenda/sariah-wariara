@@ -1,6 +1,6 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/img/bgDarkBlue.jpeg" :height="$vuetify.breakpoint.mdAndUp ? 950 : 1050">
+    <v-parallax dark src="@/assets/img/bgDarkBlue.jpeg" :height="$vuetify.breakpoint.mdAndUp ? 950 : 1350">
       <v-row justify="center" class="mt-15 mb-n15">
         <v-col cols="10">
           <v-row>
@@ -13,7 +13,7 @@
               </h2>
               <p class="font-weight-light">
                 The Anyonje family was blessed with a baby girl (Sariah
-                Wariara)). <br v-if="$vuetify.breakpoint.mdAndUp" />
+                Wariara). <br v-if="$vuetify.breakpoint.mdAndUp" />
                 Unfortunately, they received the devastating news that their
                 newborn daughter <br v-if="$vuetify.breakpoint.mdAndUp" />
                 was born with a congenital heart defect called Tetralogy of
@@ -30,7 +30,7 @@
               <p class="font-weight-bold primary--text">
                 #ForWariara
               </p>
-              <div class="video d-flex align-center py-4">
+              <div class="video d-flex align-center py-4" v-if="!$vuetify.breakpoint.mdAndUp">
                 <v-btn
                   rounded
                   outlined
@@ -82,6 +82,18 @@
                   </svg>
                 </a>
                 <p class="subheading ml-2 mb-0">Watch the Video</p>
+              </div>
+              <div v-else>
+                <v-btn
+                  rounded
+                  outlined
+                  large
+                  dark
+                  @click="$vuetify.goTo('#donations')"
+                >
+                  Make A Donation
+                  <v-icon class="ml-2">mdi-arrow-down</v-icon>
+                </v-btn>
               </div>
             </v-col>
             <v-col cols="12" md="6" xl="4">

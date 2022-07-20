@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Amount Required",
+        "icon": "mdi-airplane-edit",
+        "color": "warning",
+        "value": 2000000
+    },
+    {
+        "id": 2,
+        "name": "Amount Raised",
+        "icon": "mdi-currency-usd",
+        "color": "success",
+        "value": 130000
+    },
+    {
+        "id": 3,
+        "name": "Amount Withheld",
+        "icon": "mdi-currency-usd-off",
+        "color": "teal",
+        "value": 500
+    }
+]

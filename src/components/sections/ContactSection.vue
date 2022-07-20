@@ -1,55 +1,29 @@
 <template>
-  <section class="pa-8 mt-10" id="contact">
+  <section class="pa-8" id="contact">
     <v-container fluid>
       <v-row align="center" justify="center">
-        <v-col cols="10">
+        <v-col cols="12">
+          <v-row class="justify-center">
+            <h1 class="font-weight-bold display-1">For More Information, Contact Us Through:</h1>
+          </v-row>
           <v-row justify="center">
-            <v-col cols="12" sm="5">
-              <h1 class="font-weight-light display-1">Contact Us</h1>
-              <h3 class="font-weight-light mt-3">
-                For More Information, Contact Us Through:
-              </h3>
-              <h3 class="font-weight-light mt-3">Phone: +254712345678</h3>
-              <h3 class="font-weight-light">Email: email@email.com</h3>
+            <v-col cols="12" sm="4">
+              <h1 class="font-weight-light display-1">Family Contacts</h1>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
             </v-col>
-            <v-col cols="12" sm="7">
-              <v-form ref="form" v-model="valid" :lazy-validation="lazy">
-                <v-text-field
-                  v-model="name"
-                  :rules="nameRules"
-                  label="Name"
-                  required
-                  outlined
-                ></v-text-field>
-
-                <v-text-field
-                  v-model="email"
-                  :rules="emailRules"
-                  label="Email"
-                  required
-                  outlined
-                ></v-text-field>
-
-                <v-textarea
-                  v-model="textArea"
-                  :rules="textAreaRules"
-                  label="Message"
-                  required
-                  outlined
-                />
-
-                <v-btn
-                  :disabled="!valid"
-                  color="primary"
-                  :dark="valid"
-                  rounded
-                  block
-                  class="mt-3"
-                  @click="submit"
-                >
-                  Submit
-                </v-btn>
-              </v-form>
+            <v-col cols="12" sm="4">
+              <h1 class="font-weight-light display-1">Aga Khan Hospital</h1>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Sean</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <h1 class="font-weight-light display-1">Kenyatta National Hospital</h1>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Osano</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light"><span class="primary--text">Email:</span> email@email.com</h3>
             </v-col>
           </v-row>
         </v-col>

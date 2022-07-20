@@ -10,6 +10,9 @@
           alt: "Donate with PayPal button",
           title: "PayPal - The safer, easier way to pay online!",
         },
+        onComplete: function (params) {
+          
+        },
       }).render("#donate-button");
     </component>
   </div>
