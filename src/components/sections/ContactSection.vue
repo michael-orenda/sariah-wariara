@@ -10,7 +10,7 @@
             <v-col cols="12" sm="4">
               <h1 class="font-weight-light display-1">Family Contacts</h1>
               <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> ++254 714 393818</h3>
               <h3 class="font-weight-light"><span class="primary--text">Email:</span> <a href="mailto:stephenanyonje.gyg@gmail.com">stephenanyonje.gyg@gmail.com</a></h3>
             </v-col>
             <v-col cols="12" sm="4">
@@ -99,6 +99,3 @@ export default {
   },
 };
 </script>
-
-
-myAym2lSr4Ri2uVcUAVdz1onIzP/S0Lk4hFTjZEzcjIE9rl0vM6woJUrllnLewCsE9G939K+3J8jWYg2slgsOPx1HmX0FBvNefhAndATSWiX1swP9v5vlHgvHHjKqBmVz7gcfb9BxiwFGt14zydmeuw0mhf8m/HV9jj/N7aEawyOXfRyI1m7NJaJNunBq+xlnofLWmVlL4PW5D/cOQNiy0Gokfepuhsni8/tf1h+kDMbUDeHZIRrbZZifMCRshCDc1bahJh250IBw2yaFLJFj4FGtgcI8Kjp0xLIf7NEbjCCzivFXWFFkZj2wJqbRxAwG4lMize3RYhjtnnkxGBg/Q==
