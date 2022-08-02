@@ -10,7 +10,7 @@
             <v-col cols="12" sm="4">
               <h1 class="font-weight-dark display-1">Family Contacts</h1>
               <h3 class="font-weight-dark mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
-              <h3 class="font-weight-dark mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-dark mt-3"><span class="primary--text">Phone:</span> +254 714 393818</h3>
               <h3 class="font-weight-dark"><span class="primary--text">Email:</span> <a href="mailto:stephenanyonje.gyg@gmail.com">stephenanyonje.gyg@gmail.com</a></h3>
             </v-col>
             <v-col cols="12" sm="4">
