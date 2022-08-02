@@ -12,12 +12,5 @@
         "icon": "mdi-currency-usd",
         "color": "success",
         "value": 197200
-    },
-    {
-        "id": 3,
-        "name": "Amount Withheld in Paypal",
-        "icon": "mdi-currency-usd-off",
-        "color": "teal",
-        "value": 500
     }
 ]

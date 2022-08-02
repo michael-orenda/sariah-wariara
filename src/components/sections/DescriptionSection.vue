@@ -53,7 +53,7 @@
               </div>
             </v-col>
 
-            <v-col cols="12" sm="12" class="white--text text-center">
+            <v-col cols="12" sm="12" class="white--text text-center my-5">
               <h1 class="font-weight-light display-2 mb-2">Tetralogy of Fallot</h1>
               <p class="font-weight-light">
                 Tetralogy of Fallot is a heart condition that surrounds the four

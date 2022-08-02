@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import LandingPage from "../views/pages/LandingPage.vue";
 import Cancel from "../views/pages/Cancel.vue";
 import Completed from "../views/pages/Completed.vue";
+import Fundraiser from "../views/pages/Fundraiser.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/completed",
     name: "completed",
     component: Completed
+  },
+  {
+    path: "/fundraiser",
+    name: "fundraiser",
+    component: Fundraiser
   },
 ];
 

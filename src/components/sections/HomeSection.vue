@@ -186,12 +186,12 @@ export default {
           title: "PAYBILL NO.: 8046207",
           text: "ACCOUNT: YOUR NAME",
         },
-        {
-          id: 2,
-          img: require("@/assets/img/paypal.png"),
-          title: "HAVE A PAYPAL ACCOUNT?",
-          text: "Click Donate To Contribute Via Paypal",
-        },
+        // {
+        //   id: 2,
+        //   img: require("@/assets/img/paypal.png"),
+        //   title: "HAVE A PAYPAL ACCOUNT?",
+        //   text: "Click Donate To Contribute Via Paypal",
+        // },
         // {
         //   id: 3,
         //   img: require("@/assets/img/card.jpeg"),

@@ -6,24 +6,20 @@
           <v-row class="justify-center">
             <h1 class="font-weight-bold display-1">For More Information, Contact Us Through:</h1>
           </v-row>
-          <v-row justify="center">
+          <v-row justify="center" class="my-10">
             <v-col cols="12" sm="4">
-              <h1 class="font-weight-light display-1">Family Contacts</h1>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> <a href="mailto:stephenanyonje.gyg@gmail.com">stephenanyonje.gyg@gmail.com</a></h3>
+              <h1 class="font-weight-dark display-1">Family Contacts</h1>
+              <h3 class="font-weight-dark mt-3"><span class="primary--text">Contact Person:</span> Stephen Anyonje</h3>
+              <h3 class="font-weight-dark mt-3"><span class="primary--text">Phone:</span> +254712345678</h3>
+              <h3 class="font-weight-dark"><span class="primary--text">Email:</span> <a href="mailto:stephenanyonje.gyg@gmail.com">stephenanyonje.gyg@gmail.com</a></h3>
             </v-col>
             <v-col cols="12" sm="4">
-              <h1 class="font-weight-light display-1">Aga Khan Hospital</h1>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Sean</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> </h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
+              <h1 class="font-weight-dark display-1">Aga Khan Hospital</h1>
+              <h3 class="font-weight-dark mt-3"><span class="primary--text">Doctor:</span> Dr. Sean</h3>
             </v-col>
             <v-col cols="12" sm="4">
-              <h1 class="font-weight-light display-1">Kenyatta National Hospital</h1>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Contact Person:</span> Dr. Osano</h3>
-              <h3 class="font-weight-light mt-3"><span class="primary--text">Phone:</span> </h3>
-              <h3 class="font-weight-light"><span class="primary--text">Email:</span> </h3>
+              <h1 class="font-weight-dark display-1">Kenyatta National Hospital</h1>
+              <h3 class="font-weight-dark mt-3"><span class="primary--text">Doctor:</span> Dr. Osano</h3>
             </v-col>
           </v-row>
         </v-col>
@@ -59,7 +55,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 3rem;
+  height: 0rem;
   width: 100%;
   overflow: hidden;
 }
