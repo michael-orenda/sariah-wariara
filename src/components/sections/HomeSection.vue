@@ -24,8 +24,7 @@
                 would need open-heart surgery to survive in India.
               </p>
               <p class="font-weight-light">
-                The Amount Needed for this Operation is <span class="font-weight-bold">Kshs 2,000,000 
-                (1.5M for Open heart Surgery and 500,000 for travel expense).</span>
+                The Amount Needed for this Surgery and other expenses may total between <span class="font-weight-bold">KES 2,500,000 - KES 3,000,000 .</span>
               </p>
               <p class="font-weight-bold primary--text">
                 #ForWariara
